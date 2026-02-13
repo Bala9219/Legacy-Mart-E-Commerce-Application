@@ -101,7 +101,9 @@ const AdminOrders = () => {
                 <td>{new Date(order.createdAt).toLocaleString()}</td>
 
                 <td>
-                  <Link to={`/orders/${order.id}`}>View</Link>
+                  <Link to={`/orders/${order.id}`} className="view-link">
+                    View
+                  </Link>
                 </td>
               </tr>
             ))}

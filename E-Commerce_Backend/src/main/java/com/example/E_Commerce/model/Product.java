@@ -36,6 +36,9 @@ public class Product {
 
     private String imageUrl;
 
+    @Column(nullable = false)
+    private boolean active = true;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
     private Category category;

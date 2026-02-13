@@ -115,9 +115,9 @@ const AdminProducts = () => {
                 <td>{p.category?.name}</td>
                 <td>${p.price}</td>
                 <td>{p.stockQuantity}</td>
-                <td>
-                  <button onClick={() => handleEdit(p)}>Edit</button>
-                  <button onClick={() => handleDelete(p.id)}>Delete</button>
+                <td className="action-buttons">
+                  <button className="edit-btn" onClick={() => handleEdit(p)}>Edit</button>
+                  <button className="delete-butn" onClick={() => handleDelete(p.id)}>Delete</button>
                 </td>
               </tr>
             ))}

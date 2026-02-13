@@ -19,7 +19,7 @@ public class ProductService {
     }
 
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+        return productRepository.findByActiveTrue();
     }
 
     public Optional<Product> getProductById(Long id) {
@@ -31,7 +31,11 @@ public class ProductService {
     }
 
     public void deleteProduct(Long id) {
-        productRepository.deleteById(id);
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found for id: " + id));
+
+        product.setActive(false);
+        productRepository.save(product);
     }
 
     public List<Product> getByCategory(Long categoryId) {

@@ -32,6 +32,41 @@ header a {
   padding: 20px;
 }
 
+/*Admin-orders view button*/
+.view-link {
+  color: blue;
+}
+
+/*Admin-products edit and delete button*/
+.action-buttons{
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn{
+  background-color: #4e73df;
+  color: white;
+  border-radius: 5px;
+  padding: 5px, 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #1645d3;
+}
+
+.delete-butn {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  padding: 5px, 10px;
+  cursor: pointer;
+}
+
+.delete-butn:hover {
+  background-color: #f2230c;
+}
+
 .filter-bar {
   display: flex;
   gap: 16px;
